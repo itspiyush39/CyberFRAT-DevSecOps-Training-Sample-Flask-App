@@ -75,22 +75,6 @@ pipeline {
             '''
           }
         }
-        
-        stage('Prisma Cloud Scan') {
-          steps {
-            // Scan the image
-            prismaCloudScanImage ca: '',
-            cert: '',
-            dockerAddress: 'unix:///var/run/docker.sock',
-            image: 'thedeepsyadav/devsecops-training',
-            key: '',
-            logLevel: 'debug',
-            podmanPath: '',
-            project: '',
-            resultsFile: 'prisma-cloud-scan-results.json',
-            ignoreImageBuildTime:true
-          }
-        }
       }
     }
     
