@@ -82,7 +82,7 @@ pipeline {
       steps{
         script{
 
-          input message: 'Do you want to deploy in production?', ok: "OK"
+          input message: 'Do you want to deploy in stage?', ok: "OK"
 
         }
       }
